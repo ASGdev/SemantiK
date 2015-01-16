@@ -1,0 +1,128 @@
+body {
+	overflow: hidden;
+}
+#began {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+	height:100%;
+	width:100%;
+	background-color: red;
+	display: none;
+}
+.sk-topbar {
+	height:50px;
+	position:fixed;
+	top:25px;
+	left:0px;
+	width:100%;
+	padding: 0px 10px;
+}
+.sk-toolbar {
+	height:25px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	padding: 0px 10px;
+	background-color: rgb(238, 238, 230);
+
+}
+.sk-toolbar-draggable {
+	height:25px;
+	margin:0px;
+	display: inline;
+	float:left;
+	background-color: black;
+	width: 60%;
+	-webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+.topbar-elem {
+	height:50px;
+	margin:0px;
+	display: inline;
+	float:left;
+}
+.toolbar-elem {
+	height:25px;
+	margin:0px;
+	display: inline;
+	float:right;
+
+}
+.sk-close {
+	width: 55px;
+	background-color: red;
+}
+.sk-maximize {
+	width: 55px;
+	background-color: #E6E6E6;
+}
+.sk-minimize {
+	width: 55px;
+	background-color: blue;
+}
+.sk-history-back {
+	width: 50px;
+	background-color: black;
+}
+.sk-history-forward {
+	width: 50px;
+	background-color: red;
+}
+.sk-refresh {
+	width: 50px;
+	background-color: yellow;
+}
+.sk-urlbar {
+	width: 300px;
+	background-color: gray;
+}
+.sk-fav {
+	width: 50px;
+	background-color: yellow;
+}
+.sk-menu {
+	width: 50px;
+	background-color: red;
+}
+.sk-frame {
+	position: relative;
+	top:75px;
+	background-color: purple;
+	height:90%;
+	overflow: scroll;
+}
+iframe {
+	border: 0px none transparent;
+	height:100%;
+}
+#sk-menupanel {
+	position: absolute;
+	top: 75px;
+	right: 0px;
+	z-index: 99999999;
+	width: 0px;
+
+}
+#sk-menupanel ul li {
+	height: 75px;
+	width: 100%;
+	cursor: pointer;
+	color: black;
+	overflow: hidden;
+}
+#sk-menupanel ul li:hover {
+	height: 75px;
+	background-color: #ccc;
+
+}
+/* RESET CSS */
+
+body {
+	margin: 0px;
+	height:100%;
+	width:100%;
+}

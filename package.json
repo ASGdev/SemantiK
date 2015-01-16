@@ -1,0 +1,9 @@
+{
+  "name": "MyApp",
+  "main": "index.html",
+  "window": {
+    "title": "node-webkit demo",
+    "toolbar": false,
+    "frame": false
+  }
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="style.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<title>SemantiK</title>
+	<script>
+		
+		function start() {
+			var saved_session = true;
+			if (saved_session == false)
+			{
+				document.getElementById('began').style.display = 'block';
+			}
+			
+		}
+		
+		var ngui;
+		function load(){
+			start();
+			try{
+				ngui = require('nw.gui');
+			}
+			catch(err0)
+			{
+				alert(err0);
+			}
+		}
+	</script>
+</head>
+<body onload="load();">
+	<div class="sk-toolbar">
+		<div class="sk-toolbar-draggable"></div>
+		<div class="toolbar-elem sk-close" onclick="javascript:window.close();"></div>
+		<!-- <div class="toolbar-elem sk-maximize" onclick="max_win();"></div>
+		<div class="toolbar-elem sk-minimize" onclick="max_win();"></div> -->
+	</div>
+	<div class="sk-topbar">
+		<div class="topbar-elem sk-history-back"></div>
+		<div class="topbar-elem sk-history-forward"></div>
+		<div class="topbar-elem sk-refresh"></div>
+		<div class="topbar-elem sk-urlbar"></div>
+		<div class="topbar-elem sk-fav"></div>
+		<div class="topbar-elem sk-menu" onclick="show_menupanel()"></div>
+	</div>
+	<div class="sk-frame">
+		<iframe class="sk-content" width="100%" scrolling="auto"></iframe>
+		<div id="began">
+			<h1>Start browsing!</h1><br />
+			<input type="text" value="chercher"></input>
+			<div>
+				<ul><li> + New browsing project</li><li> * Open browsing project</li></ul>
+			</div>
+		</div>
+	</div>
+	<div id="sk-menupanel">
+		<ul>
+			<li onclick="start()">Acceuil</li>
+			<li>Favoris</li>
+			<li>Navigation Path</li>
+			<li>Search Fight</li>
+			<li>Informations</li>
+			<li>Traduire</li>
+			<li>Partager</li>
+			<li>Vérouiller</li>
+			<li>Paramètres</li>
+			<li>Bloc note</li>
+			<li onclick="show_help()">Aide</li>
+		</ul>
+	</div>
+
+	<script>
+	
+	function max_win() {
+		try {
+			
+			var win = ngui.Window.get();
+			alert(win);
+	    	win.resizeTo(screen.availWidth, screen.availHeight);
+	    	win.moveTo(0, 0);
+		}
+		catch(err)
+		{
+			alert(err);
+		}
+
+		
+	}
+
+	function show_menupanel(){
+		document.getElementById('sk-menupanel').style.width = "150px";
+	}
+	
+	function show_help() {
+
+	}
+
+	function getSelectionText() {
+    var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+    return text;
+}
+	$(window.document).ready(function (){
+   	$(div).mouseup(function (e){
+       alert(getSelectionText());
+   })
+});
+	</script>
+</body>
+</html>
